@@ -7,13 +7,21 @@ html, body { margin: 0; }
 
 :root {
     --color-primary: #0d6efd;
+    --color-primary-darked: #0c4fb3;
     --color-secondary: #adb5bd;
+    --color-secondary-darked: #8f959b;
     --color-success: #198754;
+    --color-success-darked: #115837;
     --color-info: #17a2b8;
+    --color-info-darked: #127d8d;
     --color-warning: #ffc107;
+    --color-warning-darked: #c7980b;
     --color-danger: #dc3545;
+    --color-danger-darked: #af2835;
     --color-light: #f8f9fa;
+    --color-light-darked: #c9caca;
     --color-dark: #343a40;
+    --color-dark-darked: #191c1f;
     --border-color: #dee2e6;
     --container-padding: 1em;
 }

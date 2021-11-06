@@ -1,4 +1,82 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 0.25em 0.75em;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25em;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
 
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--color-primary);
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--color-primary-darked);
+}
+.btn-secondary {
+    color: #222;
+    background-color: var(--color-secondary);
+}
+.btn-secondary:hover {
+    color: #222;
+    background-color: var(--color-secondary-darked);
+}
+.btn-success {
+    color: #fff;
+    background-color: var(--color-success);
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: var(--color-success-darked);
+}
+.btn-info {
+    color: #fff;
+    background-color: var(--color-info);
+}
+.btn-info:hover {
+    color: #fff;
+    background-color: var(--color-info-darked);
+}
+.btn-warning {
+    color: #222;
+    background-color: var(--color-warning);
+}
+.btn-warning:hover {
+    color: #fff;
+    background-color: var(--color-warning-darked);
+}
+.btn-danger {
+    color: #fff;
+    background-color: var(--color-danger);
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: var(--color-danger-darked);
+}
+.btn-light {
+    color: #222;
+    background-color: var(--color-light);
+}
+.btn-light:hover {
+    color: #222;
+    background-color: var(--color-light-darked);
+}
+.btn-dark {
+    color: #fff;
+    background-color: var(--color-dark);
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: var(--color-dark-darked);
+}
 
 
 
@@ -13,6 +91,7 @@
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    display: none;
 }
 
 
@@ -53,23 +132,35 @@
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     color: var(--color-light);
+    padding: 1em;
 }
 
 .navbar-brand {
     display: inline-block;
-    padding: 1em;
     text-decoration: none;
     color: var(--color-dark);
     font-weight: 600;
     font-size: 1.25em;
 }
 
+.navbar-toggle {
+    padding: 0.5em;
+    height: fit-content;
+}
+
+.navbar-collapse {
+    display: none;
+    flex-basis: 100%;
+}
+
 .navbar-nav {
-    display: flex;
+    display: block;
     margin: 0;
-    padding: 1em;
+    padding: 0;
 }
 
 .navbar-nav .nav-item {
@@ -92,7 +183,6 @@
 }
 
 .dropdown-menu {
-    position: absolute;
     z-index: 1000;
     background-color: white;
     border: 1px solid var(--border-color);    
@@ -115,4 +205,23 @@
 
 .show {
     display: block;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: block;
+        flex-basis: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+    }
 }
