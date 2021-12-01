@@ -137,7 +137,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-light);
+    color: #fff;
     padding: 1em;
 }
 
