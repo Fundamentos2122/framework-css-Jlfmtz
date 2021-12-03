@@ -262,11 +262,11 @@
     display: block;
     padding: 0.5em 0.75em;
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-light);
 }
 
 .nav-link:hover {
-    background-color: var(--color-light-darked);
+    background-color: var(--color-darked);
     /* color: var(--color-light); */
 }
 
