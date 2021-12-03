@@ -226,7 +226,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-light);
+    background-color: var(--color-primary-clear);
     padding: 1em;
 }
 
