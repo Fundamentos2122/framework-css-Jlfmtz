@@ -266,7 +266,7 @@
 }
 
 .nav-link:hover {
-    background-color: var(--color-darked);
+    background-color: var(--color-dark-darked);
     /* color: var(--color-light); */
 }
 
