@@ -1,6 +1,6 @@
 const attr_toggle = "data-toggle";
 const attr_target = "data-target";
-const attr_dissmiss = "data-dismiss";
+const attr_dismiss = "data-dismiss";
 const class_modal = "modal";
 const dropdown_class = "dropdown";
 const dropdown_toggle = "dropdown-toggle";
@@ -8,7 +8,6 @@ const dropdown_menu_class = "dropdown-menu";
 const navbar_toggle = "navbar-toggle";
 const menu_collapse_class = "navbar-collapse";
 const class_show = "show";
-
 
 document.addEventListener("DOMContentLoaded", function() {
     //Botones que abren un modal
@@ -19,25 +18,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //Botones que cierran un modal
-    let modal_close_buttons = document.querySelectorAll(`[${attr_dissmiss}]`)
+    let modal_close_buttons = document.querySelectorAll(`[${attr_dismiss}]`)
 
     modal_close_buttons.forEach(element => {
         element.addEventListener("click", CloseModal);
     });
-});
 
-//Dropdown del menu
-let dropdown_buttons = document.querySelectorAll(`.${dropdown_class} > .${dropdown_toggle}`)
+    //Dropdown del submenú
+    let dropdown_buttons = document.querySelectorAll(`.${dropdown_class} > .${dropdown_toggle}`);
 
-dropdown_buttons.forEach(element => {
-    element.addEventListener("click", ToggleDropdown);
-});
+    dropdown_buttons.forEach(element => {
+        element.addEventListener("click", ToggleDropdown);
+    });
 
-//Dropdown del menu
-let collapse_menu_buttons = document.querySelectorAll(`.${navbar_toggle}`)
+    //Collapse del menú
+    let collapse_menu_buttons = document.querySelectorAll(`.${navbar_toggle}`);
 
-collapse_menu_buttons.forEach(element => {
-    element.addEventListener("click", ToggleMenu);
+    collapse_menu_buttons.forEach(element => {
+        element.addEventListener("click", ToggleMenu);
+    });
 });
 
 /**
@@ -61,7 +60,7 @@ function OpenModal(e) {
  */
 function CloseModal(e) {
     //Obtener el selector del elemento a ocultar
-    let modal_selector = e.target.getAttribute(attr_dissmiss);
+    let modal_selector = e.target.getAttribute(attr_dismiss);
 
     //Obtener el elemento del DOM
     let modal = document.querySelector(modal_selector);
